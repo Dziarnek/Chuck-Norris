@@ -1,0 +1,31 @@
+@mixin transform ($scale)
+    -webkit-transform: scale($scale)
+    -ms-transform: scale($scale)
+    transform: scale($scale)
+
+body
+    margin: 0   
+    display: flex 
+    .container
+        text-align: center
+        margin: 100px auto
+        background-color: #ccc
+        padding: 75px 100px
+        border-radius: 15px
+        h1
+            font-size: 40px
+        #get-joke
+            border: 1px solid black
+            background-color: #313234
+            color: white
+            font-size: 20px
+            border-radius: 5px
+            &:hover
+                @include transform(1.2)
+                cursor: pointer
+        #joke
+            padding: 20px
+            font-size: 25px
+            background-color: #bbb
+            border: 1px solid #888
+            border-radius: 5px
